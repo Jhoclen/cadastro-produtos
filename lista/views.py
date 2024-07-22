@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from.models import Produtos
 
 def home(request):
-    print(request.method)
+    #print(request.method)
     if request.method == 'GET':
         erro = request.GET.get('erro')
         texto = request.GET.get('texto')
@@ -38,7 +38,7 @@ def home(request):
         
 def colunas(request):
     produtos = Produtos.objects.all()
-    print(produtos)
+    #print(produtos)
     return render(request, 'lista.html',{'produtos':produtos})
 
 def inicio(request):
