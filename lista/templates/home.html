@@ -31,11 +31,11 @@
         <form action="/produtos/save" method="post"> {% csrf_token %}
             <label for="">Digite o nome do produto</label>
             <br>
-            <input type="text" placeholder="digite o nome do produto" name="produto" class="form-control" required >
+            <input type="text" placeholder="digite o nome do produto" name="produto" class="form-control" required  pattern="[A-Za-z\s]+">
             <br>
             <label for="">Digite o preço do produto</label>
             <br>
-            <input type="text" placeholder="digite o preço do produto" name="preco" class="form-control" required >
+            <input type="number" placeholder="digite o preço do produto" name="preco" class="form-control" required >
             <br>
             <input type="submit" value="Cadastrar" class="btn btn-dark">
         </form>
